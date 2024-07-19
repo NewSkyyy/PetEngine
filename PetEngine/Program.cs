@@ -166,13 +166,13 @@ public class PetEng: VertexOperations
             _gl.TexImage2D(TextureTarget.Texture2D, 0, InternalFormat.Rgba, (uint) image.Width, 
                 (uint) image.Height, 0, PixelFormat.Rgba, PixelType.UnsignedByte, ptr);
 
-        //What to do if values in fragment shader lesser then 0 or greater than 1 at x
+        //to do if values in fragment shader lesser then 0 or greater than 1 at x
         _gl.TexParameterI(GLEnum.Texture2D, GLEnum.TextureWrapS, (int)TextureWrapMode.Repeat);
-        //What to do if values in fragment shader lesser then 0 or greater than 1 at y
+        //to do if values in fragment shader lesser then 0 or greater than 1 at y
         _gl.TexParameterI(GLEnum.Texture2D, GLEnum.TextureWrapT, (int)TextureWrapMode.Repeat);
-        //What to do if texture area is lesser than image
+        //to do if texture area is lesser than image
         _gl.TexParameterI(GLEnum.Texture2D, GLEnum.TextureMinFilter, (int)TextureMinFilter.NearestMipmapNearest);
-        //What to do if texture area is greater than image
+        //to do if texture area is greater than image
         _gl.TexParameterI(GLEnum.Texture2D, GLEnum.TextureMagFilter, (int)TextureMagFilter.Nearest);
 
         _gl.Enable(EnableCap.Blend);
